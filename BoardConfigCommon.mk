@@ -60,6 +60,7 @@ TARGET_NO_BOOTLOADER := true
 BOARD_DTBTOOL_ARGS := -2
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
@@ -93,7 +94,7 @@ BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
 
 # Crypto
-TARGET_HW_DISK_ENCRYPTION := true
+#TARGET_HW_DISK_ENCRYPTION := true
 
 # Dex
 ifeq ($(HOST_OS),linux)
@@ -126,7 +127,7 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # Malloc
-MALLOC_IMPL := dlmalloc
+#MALLOC_IMPL := dlmalloc
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
@@ -149,24 +150,24 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 TARGET_RIL_VARIANT := caf
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+#include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += \
+#BOARD_SEPOLICY_DIRS += \
     $(VENDOR_PATH)/sepolicy
 
 # Video
 TARGET_HAVE_SIGNED_VENUS_FW := true
 
 # Wifi
-BOARD_HAS_QCOM_WLAN := true
-BOARD_HAS_QCOM_WLAN_SDK := true
-BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_qcwcn
-BOARD_WLAN_DEVICE := qcwcn
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
-TARGET_USES_QCOM_WCNSS_QMI := true
-TARGET_USES_WCNSS_CTRL := true
-WIFI_DRIVER_FW_PATH_AP := "ap"
-WIFI_DRIVER_FW_PATH_STA := "sta"
-WPA_SUPPLICANT_VERSION := VER_0_8_X
+#BOARD_HAS_QCOM_WLAN := true
+#BOARD_HAS_QCOM_WLAN_SDK := true
+#BOARD_HOSTAPD_DRIVER := NL80211
+#BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_qcwcn
+#BOARD_WLAN_DEVICE := qcwcn
+#BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+#BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
+#TARGET_USES_QCOM_WCNSS_QMI := true
+#TARGET_USES_WCNSS_CTRL := true
+#WIFI_DRIVER_FW_PATH_AP := "ap"
+#WIFI_DRIVER_FW_PATH_STA := "sta"
+#WPA_SUPPLICANT_VERSION := VER_0_8_X
