@@ -158,6 +158,9 @@ TARGET_RIL_VARIANT := caf
 # Video
 TARGET_HAVE_SIGNED_VENUS_FW := true
 
+#USB
+PRODUCT_PROPERTY_OVERRIDES +=  persist.sys.usb.config=mtp,adb
+
 # Wifi
 #BOARD_HAS_QCOM_WLAN := true
 #BOARD_HAS_QCOM_WLAN_SDK := true
