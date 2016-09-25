@@ -49,8 +49,7 @@ TARGET_CPU_VARIANT := cortex-a53
 endif
 
 # Properties (reset them here, include more in device if needed)
-# Let me manage it from the device tree itself
-# TARGET_SYSTEM_PROP := $(VENDOR_PATH)/system.prop
+TARGET_SYSTEM_PROP := $(VENDOR_PATH)/system.prop
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8916
