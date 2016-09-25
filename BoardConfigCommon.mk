@@ -124,9 +124,6 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 # Keymaster
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
-# Malloc
-MALLOC_IMPL := dlmalloc
-
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 
