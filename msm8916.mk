@@ -132,6 +132,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_cm
 
+# Telephony-ext
+PRODUCT_PACKAGES += telephony-ext ims-ext-common
+PRODUCT_BOOT_JARS += telephony-ext
+
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \
